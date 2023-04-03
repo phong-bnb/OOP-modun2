@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        class QuadraticEquation {
+            constructor(a, b, c,x1,x2) {
+                this.a = a
+                this.b = b
+                this.c = c
+            }
+            getRoot1(){
+              let  x1 = (-b+Math.pow(delta),0.5)/2*a
+            }
+            getRoot2(){
+                let x2 = (-b-Math.pow(delta),0.5)/2*a
+            }
+            getDiscriminant() {
+                let delta = b * b - 4 * a * c
+                if(delta>0){
+                    
+                        return x1 
+                  
+                        return x2 
+                    
+                } if(delta=0){
+                    return x1 
+                } else{
+                    console.log("The equation has no roots" );
+                }
+
+                }
+            }
+        let trr = new QuadraticEquation(1,2,3)
+        console.log(trr.x1);
+    </script>
+</body>
+
+</html>
