@@ -11,35 +11,47 @@
 <body>
     <script>
         class QuadraticEquation {
-            constructor(a, b, c,x1,x2) {
+            constructor(a, b, c) {
                 this.a = a
                 this.b = b
                 this.c = c
             }
-            getRoot1(){
-              let  x1 = (-b+Math.pow(delta),0.5)/2*a
-            }
-            getRoot2(){
-                let x2 = (-b-Math.pow(delta),0.5)/2*a
-            }
-            getDiscriminant() {
-                let delta = b * b - 4 * a * c
-                if(delta>0){
-                    
-                        return x1 
-                  
-                        return x2 
-                    
-                } if(delta=0){
-                    return x1 
-                } else{
-                    console.log("The equation has no roots" );
-                }
 
-                }
+            getDiscriminant() {
+                let delta = (this.b *this.b) - (4 * this.a * this.c)
+
+                return delta
+                
             }
-        let trr = new QuadraticEquation(1,2,3)
-        console.log(trr.x1);
+            getRoot1() {
+
+                return(((-this.b) + Math.sqrt(this.getDiscriminant())) / (2 * this.a))
+                
+            }
+            getRoot2() {
+                return(((-this.b) -  Math.sqrt(this.getDiscriminant())) / (2 * this.a))
+                  
+            }
+        }
+        let trr = new QuadraticEquation(2,6,2)
+       console.log(trr.a);
+       console.log(trr.b);
+       console.log(trr.c);
+       console.log("delta "+ trr.getDiscriminant());
+       if (trr.getDiscriminant() > 0) { 
+        console.log(trr.getRoot1());
+                    console.log(trr.getRoot2());
+        
+                 
+                } else if (trr.getDiscriminant() == 0) {
+                    console.log( +Math.pow(trr.getDiscriminant()),0.5);
+                    console.log("1"+trr.getRoot1());
+                } else {
+                    console.log("The equation has no roots"); 
+                }
+                
+                
+
     </script>
 </body>
 
